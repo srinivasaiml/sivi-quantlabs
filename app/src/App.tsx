@@ -245,7 +245,7 @@ function App() {
         )}
 
         {/* 3D canvas panel */}
-        {(viewMode === '3d' || viewMode === 'split') && (
+        {show3D && (
           <div className="panel panel-3d">
             {has3D ? (
               <Canvas
