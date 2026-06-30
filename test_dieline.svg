@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+
+  <!--
+    Properly structured box dieline
+    ─────────────────────────────────
+    Layout (all panels share exact edge coords):
+
+        [  Top Flap  ]         y=10–70,  x=100–200
+    [L] [  FRONT     ] [R]    y=70–320, x=60–100, 100–200, 200–240
+        [ Bottom Flap ]        y=320–380, x=100–200
+
+    RED   (#FF0000) = single continuous outer cut contour
+    GREEN (#00AA00) = crease / fold lines (shared edges between panels)
+  -->
+
+  <!-- ═══════════════════════════════════════════
+       OUTER CUT CONTOUR — one continuous path
+       Traces the full perimeter of the flat dieline
+  ═══════════════════════════════════════════ -->
+  <path
+    d="M 100,10
+       L 200,10
+       L 200,70
+       L 240,70
+       L 240,320
+       L 200,320
+       L 200,380
+       L 100,380
+       L 100,320
+       L  60,320
+       L  60, 70
+       L 100, 70
+       Z"
+    stroke="#FF0000"
+    stroke-width="1.5"
+    fill="none"
+  />
+
+  <!-- ═══════════════════════════════════════════
+       CREASE / FOLD LINES — exactly on panel edges
+  ═══════════════════════════════════════════ -->
+
+  <!-- Top horizontal crease: top flap / front panel boundary -->
+  <line x1=" 60" y1=" 70" x2="240" y2=" 70" stroke="#00AA00" stroke-width="1.2"/>
+
+  <!-- Bottom horizontal crease: front panel / bottom flap boundary -->
+  <line x1=" 60" y1="320" x2="240" y2="320" stroke="#00AA00" stroke-width="1.2"/>
+
+  <!-- Left vertical crease: left side panel / front panel boundary -->
+  <line x1="100" y1=" 70" x2="100" y2="320" stroke="#00AA00" stroke-width="1.2"/>
+
+  <!-- Right vertical crease: front panel / right side panel boundary -->
+  <line x1="200" y1=" 70" x2="200" y2="320" stroke="#00AA00" stroke-width="1.2"/>
+
+</svg>

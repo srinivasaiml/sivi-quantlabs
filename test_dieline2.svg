@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" width="320" height="260">
+
+  <!--
+    Full 6-panel wrap-around box dieline
+    ─────────────────────────────────────
+    Panels (W=120, D=30, H=180):
+
+    y=0–30   : [ top flap (front face) ]
+    y=30–210 : [D-left][  FRONT  ][D-right][  BACK  ]
+    y=210–240: [ bottom flap (front face) ]
+
+    RED   = outer cut contour
+    GREEN = crease / fold lines
+  -->
+
+  <!-- ═══════════════════════════
+       OUTER CUT CONTOUR (red)
+  ═══════════════════════════ -->
+  <path
+    d="M  30,  0
+       L 180,  0
+       L 180, 30
+       L 310, 30
+       L 310,210
+       L 180,210
+       L 180,240
+       L  30,240
+       L  30,210
+       L  10,210
+       L  10, 30
+       L  30, 30
+       Z"
+    stroke="#FF0000"
+    stroke-width="1.5"
+    fill="none"
+  />
+
+  <!-- ═══════════════════════════════════════
+       CREASE / FOLD LINES (green)
+  ═══════════════════════════════════════ -->
+
+  <!-- Top horizontal crease (top-flap / main body) -->
+  <line x1=" 10" y1=" 30" x2="310" y2=" 30" stroke="#00AA00" stroke-width="1.2"/>
+
+  <!-- Bottom horizontal crease (main body / bottom-flap) -->
+  <line x1=" 10" y1="210" x2="310" y2="210" stroke="#00AA00" stroke-width="1.2"/>
+
+  <!-- Left depth crease (left-side-panel / front-face) -->
+  <line x1=" 30" y1=" 30" x2=" 30" y2="210" stroke="#00AA00" stroke-width="1.2"/>
+
+  <!-- Front/Right depth crease (front-face / right-side-panel) -->
+  <line x1="180" y1="  0" x2="180" y2="240" stroke="#00AA00" stroke-width="1.2"/>
+
+  <!-- Right depth crease (right-side-panel / back-face) -->
+  <line x1="220" y1=" 30" x2="220" y2="210" stroke="#00AA00" stroke-width="1.2"/>
+
+</svg>
